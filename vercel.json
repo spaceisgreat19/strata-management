@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "regions": ["syd1"], 
+  "crons": [
+    {
+      "path": "/api/maintenance-check",
+      "schedule": "0 0 * * *"
+    }
+  ],
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_API_URL": "https://api.example.com"
+    }
+  }
+}
