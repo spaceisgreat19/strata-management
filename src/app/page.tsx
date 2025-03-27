@@ -9,6 +9,7 @@ export default function Home() {
         <li>View financial records</li>
       </ul>
       <img src="/strata_project.jpg" alt="Strata Project" />
+      <img src="/strata_project.svg" alt="Strata Project" />
     </div>
   );
 }
