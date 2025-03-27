@@ -1,0 +1,5 @@
+Host vercel.com
+    HostName vercel.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
