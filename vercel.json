@@ -8,8 +8,20 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/pages/api/$1"
+      "src": "/api/finance",
+      "dest": "/pages/api/finance.ts"
+    },
+    {
+      "src": "/api/log-maintenance",
+      "dest": "/pages/api/log-maintenance.ts"
+    },
+    {
+      "src": "/api/maintenance",
+      "dest": "/pages/api/maintenance.ts"
+    },
+    {
+      "src": "/api/vote",
+      "dest": "/pages/api/vote.ts"
     }
   ],
   "regions": ["syd1"],
@@ -19,9 +31,7 @@
       "schedule": "0 0 * * *"
     }
   ],
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_API_URL": "https://api.example.com"
-    }
+  "env": {
+    "NEXT_PUBLIC_API_URL": "https://api.example.com"
   }
 }
