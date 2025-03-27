@@ -1,19 +1,32 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-export default function Maintenance() {
-  const [requests, setRequests] = useState([
-    { id: 1, issue: 'Leaking pipe in Unit 203' },
-    { id: 2, issue: 'Broken elevator' },
-  ]);
+export default function MaintenanceRequest() {
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const response = await fetch("/api/log-maintenance", {
+      method: "POST",
+      body: JSON.stringify({
+        apartment: formData.get("apartment"),
+        issue: formData.get("issue"),
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+    const data = await response.json();
+    setMessage(data.message);
+  };
 
   return (
     <div>
-      <h1>Maintenance Requests</h1>
-      <ul>
-        {requests.map((request) => (
-          <li key={request.id}>{request.issue}</li>
-        ))}
-      </ul>
+      <h1>Maintenance Request</h1>
+      <form onSubmit={handleSubmit}>
+        <label>Apartment: <input type="text" name="apartment" required /></label>
+        <label>Issue: <input type="text" name="issue" required /></label>
+        <button type="submit">Submit</button>
+      </form>
+      {message && <p>{message}</p>}
     </div>
   );
 }
