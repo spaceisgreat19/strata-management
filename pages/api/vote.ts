@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function middleware(req: NextRequest) {
-  const { candidate } = await req.json();
-  return NextResponse.json({ message: `Vote received for ${candidate}` });
-}
+export default async function handler(req: NextRequest) {
+  if (req.method === 'POST') {
+    const { apartment, issue } = await req.json();
 
-export const config = { runtime: 'edge' };
+    return NextResponse.json({
+      message: `Vote request for apartment ${apartment} regarding: ${issue} has been logged.`,
+    });
+  } else {
+    return NextResponse.json({ message: 'Method Not Allowed' }, { status: 405 });
+  }
+}
