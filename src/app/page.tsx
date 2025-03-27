@@ -8,6 +8,7 @@ export default function Home() {
         <li>Manage committee members</li>
         <li>View financial records</li>
       </ul>
+      <img src="/strata_project.jpg" alt="Strata Project" />
     </div>
   );
 }
