@@ -1,12 +1,11 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-let maintenanceRequests: { apartment: string; issue: string }[] = [];
+const maintenanceRequests: { apartment: string; issue: string }[] = [];
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { apartment, issue } = req.body;
 
-    // Validate request body
     if (!apartment || !issue) {
       return res.status(400).json({ message: 'Apartment and issue are required.' });
     }
@@ -22,5 +21,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json(maintenanceRequests);
   }
 
-  res.status(405).json({ message: 'Method Not Allowed' });
+  return res.status(405).json({ message: 'Method Not Allowed' });
 }
