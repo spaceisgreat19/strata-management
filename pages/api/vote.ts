@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function POST(req: NextRequest) {
+export async function POST(req) {
   try {
-    const { apartment, issue } = await req.json();
+    const body = await req.json();
+    const { apartment, issue } = body;
 
     if (!apartment || !issue) {
       return NextResponse.json(
