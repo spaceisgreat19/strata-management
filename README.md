@@ -1,6 +1,6 @@
-Strata Management Website
+#Strata Management Website
 
-Overview
+##Overview
 
 This project is a Strata Management website built using Next.js and deployed on Vercel.
 
@@ -8,7 +8,7 @@ Strata management refers to the administration and maintenance of shared propert
 
 The website provides a simple platform for residents and committee members to access important strata-related information and services.
 
-Features
+##Features
 
 * Committee page displaying committee member information.
 * Finance page showing strata financial reports.
@@ -21,22 +21,22 @@ Features
 * Edge functions for improved performance.
 * Hosted and automatically deployed using Vercel.
 
-Running the Project
+#Running the Project
 
-1. Install dependencies:
+##1. Install dependencies:
 
 npm install
 
-2. Start the development server:
+##2. Start the development server:
 
 npm run dev
 
-3. Open your browser and navigate to:
+##3. Open your browser and navigate to:
 
 http://localhost:3000
 
 The application will automatically reload when changes are made to the source code.
 
-Deployment
+##Deployment
 
 The project is deployed using Vercel. Changes pushed to the repository can be automatically deployed, making it easy to update and maintain the website online.
