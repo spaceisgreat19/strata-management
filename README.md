@@ -1,42 +1,55 @@
-#Strata Management Website
+# 🏢 Strata Management Website
 
-##Overview
+## Overview
 
-This project is a Strata Management website built using Next.js and deployed on Vercel.
+This project is a Strata Management web application built using Next.js and deployed on Vercel.
 
-Strata management refers to the administration and maintenance of shared properties such as apartment buildings, townhouses, and residential complexes. It involves managing finances, maintenance requests, committee information, and community decisions.
+Strata management involves the administration and maintenance of shared residential properties such as apartment buildings and residential complexes. The website provides functionality for managing maintenance requests, finances, committee information, and community voting.
 
-The website provides a simple platform for residents and committee members to access important strata-related information and services.
+## Features
 
-##Features
+- Committee page displaying committee member information
+- Finance page displaying financial reports
+- Maintenance request form using POST requests
+- Maintenance requests page using GET requests
+- Voting page for strata-related decisions
+- Thank-you page with redirect functionality
+- Edge Functions
+- Static image support
+- Automatic deployment through Vercel
 
-* Committee page displaying committee member information.
-* Finance page showing strata financial reports.
-* Maintenance request form for submitting maintenance issues.
-* Maintenance requests page for viewing submitted requests.
-* Voting page for community decisions.
-* Thank-you page displayed after successful submissions.
-* GET and POST requests for handling user data.
-* Redirect functionality after form submissions.
-* Edge functions for improved performance.
-* Hosted and automatically deployed using Vercel.
+## Running the Project
 
-#Running the Project
+Install dependencies:
 
-##1. Install dependencies:
-
+```bash
 npm install
+```
 
-##2. Start the development server:
+Start the development server:
 
+```bash
 npm run dev
+```
 
-##3. Open your browser and navigate to:
+Open your browser and visit:
 
+```text
 http://localhost:3000
+```
 
-The application will automatically reload when changes are made to the source code.
+## Deployment
 
-##Deployment
+This project is deployed on Vercel and automatically updates when changes are pushed to the repository.
 
-The project is deployed using Vercel. Changes pushed to the repository can be automatically deployed, making it easy to update and maintain the website online.
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Vercel
+- GitHub
+
+## Author
+
+Nathaniel Darren Lim
