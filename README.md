@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Strata Management Website
 
-## Getting Started
+Overview
 
-First, run the development server:
+This project is a Strata Management website built using Next.js and deployed on Vercel.
 
-```bash
+Strata management refers to the administration and maintenance of shared properties such as apartment buildings, townhouses, and residential complexes. It involves managing finances, maintenance requests, committee information, and community decisions.
+
+The website provides a simple platform for residents and committee members to access important strata-related information and services.
+
+Features
+
+* Committee page displaying committee member information.
+* Finance page showing strata financial reports.
+* Maintenance request form for submitting maintenance issues.
+* Maintenance requests page for viewing submitted requests.
+* Voting page for community decisions.
+* Thank-you page displayed after successful submissions.
+* GET and POST requests for handling user data.
+* Redirect functionality after form submissions.
+* Edge functions for improved performance.
+* Hosted and automatically deployed using Vercel.
+
+Running the Project
+
+1. Install dependencies:
+
+npm install
+
+2. Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open your browser and navigate to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application will automatically reload when changes are made to the source code.
 
-## Learn More
+Deployment
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The project is deployed using Vercel. Changes pushed to the repository can be automatically deployed, making it easy to update and maintain the website online.
